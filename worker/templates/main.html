@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Main{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form class="mui-form" action="/interpret" method="POST">
+  <legend>Submit problems JSON</legend>
+  JSON can be obtained here <a href="https://leetcode.com/api/problems/algorithms/">https://leetcode.com/api/problems/algorithms/</a><br/>
+  You have to be logged in in order to get a valid output.<br/>
+  <div class="mui-textfield">
+    <textarea name="problems" id="problems" placeholder="JSON from https://leetcode.com/api/problems/algorithms/"></textarea>
+  </div>
+  <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+</form>
+{% endblock %}

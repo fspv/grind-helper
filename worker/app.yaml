@@ -1,0 +1,9 @@
+runtime: python39
+app_engine_apis: true
+service: worker
+
+handlers:
+  - url: /invalidate_cache_schedule
+    script: auto
+  - url: /invalidate_cache
+    script: auto

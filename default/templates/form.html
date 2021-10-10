@@ -1,0 +1,22 @@
+<form class="mui-form" action="/" method="POST">
+  <legend>Get your leetcode statistics</legend>
+  Copy the content from
+  <a href="https://leetcode.com/api/problems/algorithms/">
+      https://leetcode.com/api/problems/algorithms/
+  </a>
+  into this form and see the magic happens
+  <br/>
+  (you must be logged in in order to get the correct JSON)
+  <br/>
+  <div class="mui-textfield">
+    {{ form.problems(placeholder="Paste JSON here") }}
+  </div>
+  {% if form.problems.errors %}
+    <ul class="errors">
+        {% for error in form.problems.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+  {% endif %}
+  <button type="Submit" class="mui-btn mui-btn--raised">Submit</button>
+</form>

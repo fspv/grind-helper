@@ -1,0 +1,27 @@
+<h2>Problem for you</h2>
+Here is the problem for you to solve:
+<a href="https://leetcode.com/problems/{{ to_solve }}">
+    {{ to_solve_name }}
+</a>
+<br/>
+This one covers topics you're least familiar with.
+
+<h2>Detailed topics breakdown</h2>
+<table class="mui-table">
+  <tbody>
+    {% for tag, progress in tag_progress.items() %}
+    <tr>
+        <td>
+            <a href="https://leetcode.com/tag/{{ tag }}/">
+              {{ tag_to_name[tag] }}
+            </a>
+        </td>
+      <td>
+        <progress value="{{ "%.2f"|format(progress) }}" max="100">
+          {{ "%.2f"|format(progress) }}
+        </progress>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

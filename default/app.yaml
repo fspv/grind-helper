@@ -1,0 +1,7 @@
+runtime: python39
+app_engine_apis: true
+service: default
+
+handlers:
+  - url: /.*
+    script: auto

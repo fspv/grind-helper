@@ -1,0 +1,6 @@
+flask[async]
+wtforms
+gunicorn
+python-leetcode
+google-cloud-secret-manager
+appengine-python-standard
