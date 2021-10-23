@@ -1,6 +1,6 @@
 flask[async]
 wtforms
 gunicorn
-python-leetcode==1.0.10
+python-leetcode
 google-cloud-secret-manager
 appengine-python-standard

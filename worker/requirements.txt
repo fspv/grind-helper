@@ -1,5 +1,5 @@
 flask[async]
 gunicorn
-python-leetcode
+python-leetcode==1.0.10
 google-cloud-secret-manager
 appengine-python-standard
